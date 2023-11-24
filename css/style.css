@@ -9,12 +9,12 @@
 /* variaveis */
 
 :root {
-    --main-color: #54B689;
+    --main-color: #F26006;
     --main-text-color: #fff;
-    --border-color: #999;
-    --bio-bg-color: #1e2a3a;
+    --border-color: #F26006;
+    --bio-bg-color: black;/*Mudar*/
     --bio-border-color: #293544;
-    --about-bg-color: #111821;
+    --about-bg-color: black;
 }
 
 /* Geral */
