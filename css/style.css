@@ -1,3 +1,23 @@
+@keyframes spin {
+    0%{
+        transform: rotate(360deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes carregar {
+    0%{
+        background-position: 0 0;
+    }
+    0%{
+        background-position: 500% 0;
+    }
+}
+
 /* Reset */
 * {
     padding: 0;
@@ -14,7 +34,8 @@
     --border-color: #11FF00;
     --bio-bg-color: black;
     --bio-border-color: #293544;
-    --about-bg-color: #1a1a1a;
+    --about-bg-color: #353535;
+    /* --F26006 */
 }
 
 /* Geral */
@@ -209,10 +230,63 @@
     font-size: 45px;
     margin-right: 10px ;
 }
+/* animaçoes */
+.animations-section{
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+    margin: 20px;
+    font-size: 32px;
+}
 
+
+.animations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.loading{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid #00000062;
+    border-bottom-color: #11FF00;
+
+    animation: spin 1s infinite linear;
+}
+.loading-bar{
+    position: relative;
+    width: 200px;
+    height: 20px;
+    border-radius: 15px;
+
+    background-color: #FFF;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+.loading-bar::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+
+    background: linear-gradient(90deg,#fb0094,#0000ff,#00ff00,#ffff00,#fb0094,#0000ff,#00ff00,#ffff00);
+    background-size: 500%;
+    animation: carregar 10s linear infinite;
+}
+.loading-bar::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+
+    background: linear-gradient(90deg,#fb0094,#0000ff,#00ff00,#ffff00,#fb0094,#0000ff,#00ff00,#ffff00);
+    background-size: 500%;
+    filter: blur(15px);
+}
 
 /* mobile */
-@media(max-width:450px){
+@media(max-width:600px){
     #container{
         flex-direction: column;
     }
@@ -220,7 +294,7 @@
     #bio-container{
         min-height: auto;
         border-right: none;
-        border-bottom: 5px solid var(--bio-border-color);
+        border-bottom: 5px solid var(--border-color);
     }
 
     #bio-container h2{
