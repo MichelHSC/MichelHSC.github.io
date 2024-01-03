@@ -10,6 +10,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Passion+One&family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap"
         rel="stylesheet">
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- ion ICON -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer> </script>
     <!-- Icon da pagina -->
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -30,7 +34,10 @@
     <main id="container">
         <aside id="bio-container">
             <h2>Michel Henrique</h2>
-            <img id="bio-img" src="img/git_perfil.png" alt="Michel Henrique">
+            <div class="gallery-item">
+                <img id="bio-img" src="img/git_perfil.png" class="gallery-image" data-src="img/git_perfil.png"
+                    alt="Michel Henrique">
+            </div>
             <p>Olá meu nome é <br>Michel Henrique e eu sou um <br><span class="highlight">Futuro Desenvolvedor</span>
             </p>
             <p id="welcome-text">Seja Bem-Vindo!</p>
@@ -118,10 +125,14 @@
 
         </section>
 
-
+        <div class="lightbox">
+            <div class="lightbox-content">
+                <img src="img/git_perfil.png" alt="Imagem em destaque" class="lightbox-image">
+            </div>
+            <a href="#" class="lightbox-close"><i class="bi bi-x"></i></a>
+        </div>
     </main>
-    <!-- ion ICON -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script>
+
 </body>
 
 </html>
