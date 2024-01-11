@@ -13,7 +13,6 @@ function updateClock() {
   minutesElement.textContent = minutes;
   secondsElement.textContent = seconds;
 
-  console.log(now, hours, minutes, seconds);
 }
 
 setInterval(updateClock, 1000);
