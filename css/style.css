@@ -91,6 +91,17 @@
   padding: 30px 12px;
   border-right: 5px solid var(--border-color);
 }
+.wpp-fundo{
+  margin: 0;
+  background-size: cover;
+  
+}
+.img-fundo{
+  width: 230px;
+  height: 150px;
+  border-radius: 5px;
+  margin: 0;
+}
 
 #about-container {
   flex: 1 1 80%;
@@ -102,16 +113,16 @@
 /* bio container */
 
 #bio-container h2 {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 #bio-container p {
   margin-bottom: 20px;
 }
 
-#bio-container img {
-  width: 150px;
-  height: 150px;
+.apresentacao{
+  position: relative;
+  bottom: 100px;
 }
 
 #bio-container #welcome-text {
@@ -119,6 +130,9 @@
 }
 
 #bio-img {
+  position: relative;
+  bottom: 100px;
+  background-color: #707470;
   width: 175px;
   height: 175px;
   border-radius: 50%;
@@ -145,6 +159,9 @@
   color: var(--main-color);
   font-size: 30px;
 }
+#social-container li a ion-icon:hover {
+  color: var(--main-color-2);
+}
 
 #email-container {
   display: flex;
@@ -167,6 +184,7 @@
   font-size: 20px;
   margin-right: 5px;
   max-width: 20px;
+  cursor: pointer;
 }
 
 /* about container */
@@ -186,10 +204,14 @@
   max-width: 75%;
   margin-bottom: 10px;
 }
-
+.btn-share {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 #btn-projects {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--main-text-color);
   background-color: var(--main-color);
   border: 2px solid var(--main-color);
@@ -197,10 +219,18 @@
   text-decoration: none;
   transition: 0.5s;
   margin: 25px 0;
-  width: 150px;
-  padding: 12px 10px;
+  width: 200px;
+  padding: 12px 9px;
   text-align: center;
+  align-items: center;
   display: flex;
+  opacity: 0.8;
+  transition: 0.8s;
+}
+
+#btn-projects ion-icon {
+  font-size: 2rem;
+  padding: 0;
 }
 
 #btn-projects ion-icon,
@@ -214,7 +244,9 @@
 }
 
 #btn-projects:hover {
-  background-color: transparent;
+  background-color: var(--border-color-2);
+  border-color: var(--border-color-2);
+  opacity: 1;
 }
 
 #skills-section-title {
@@ -326,7 +358,7 @@
 }
 
 .container-relogio {
-  margin-top: 20px;
+  margin-top: 40px;
   display: flex;
 }
 
@@ -395,8 +427,13 @@
   #container {
     flex-direction: column;
   }
+  .btn-share {
+    justify-content: center;
+  }
 
   #bio-container {
+    padding: 0;
+    margin: 0;
     min-height: auto;
     border-right: none;
   }
@@ -439,4 +476,33 @@
     max-width: 300px;
     border-radius: 20px;
   }
+  .container-relogio {
+    justify-content: center;
+  }
+
+  .animations {
+    display: grid;
+  }
+
+  .carregando {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bar-colorida {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-relogio,
+  .bar-colorida {
+    margin-top: 50px;
+  }
+  .img-fundo {
+    margin: 5px 0px;
+    width: 430px;
+    height: 200px;
+  }
+
 }

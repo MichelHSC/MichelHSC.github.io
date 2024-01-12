@@ -12,7 +12,6 @@ function updateClock() {
   hoursElement.textContent = hours;
   minutesElement.textContent = minutes;
   secondsElement.textContent = seconds;
-
 }
 
 setInterval(updateClock, 1000);
@@ -36,3 +35,46 @@ galleryItems.forEach((item) => {
 lightboxClose.addEventListener("click", () => {
   lightbox.style.display = "none";
 });
+
+// ONLOAD CARREGAR EVENTOS DEPOIS
+
+// FOCO NA FOTO
+const imgFocus = document.querySelector("#bio-img");
+
+function focuFoto() {
+  const div = document.querySelector("#bio-img");
+  div.style.borderColor = "#F16006";
+}
+function noFocuFoto() {
+  const div = document.querySelector("#bio-img");
+  div.style.borderColor = "#11FF00";
+}
+
+imgFocus.addEventListener("mouseenter", focuFoto);
+imgFocus.addEventListener("mouseleave", noFocuFoto);
+
+
+// FOCO COLORIDO
+const ionColor = document.querySelector("#icon-email");
+const emailColor = document.querySelector("#email-link");
+
+function focoEmail() {
+  const liEmail = document.querySelector("#email-link");
+  const div = document.querySelector("#icon-email");
+  liEmail.style.color = "#F16006";
+  div.style.color = "#F16006";
+}
+function noFocoEmail() {
+  const liEmail = document.querySelector("#email-link");
+  const div = document.querySelector("#icon-email");
+  liEmail.style.color = "#FFF";
+  div.style.color = "#11FF00";
+}
+
+ionColor.addEventListener("mouseenter", focoEmail)
+ionColor.addEventListener("mouseleave", noFocoEmail);
+emailColor.addEventListener("mouseenter", focoEmail);
+emailColor.addEventListener("mouseleave", noFocoEmail);
+
+
+// 
