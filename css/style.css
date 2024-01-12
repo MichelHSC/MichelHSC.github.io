@@ -504,5 +504,9 @@
     width: 430px;
     height: 200px;
   }
+  #email-container ion-icon,
+  #email-container a{
+    font-size: 1.3rem;
+  }
 
 }
